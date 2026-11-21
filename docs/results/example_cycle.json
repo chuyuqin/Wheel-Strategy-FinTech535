@@ -1,0 +1,12 @@
+{
+  "period": "test",
+  "start": "2026-01-26",
+  "end": "2026-04-17",
+  "net_profit": 976.0499999999956,
+  "premium": 978.0000000000001,
+  "stock_cashflow": 0.0,
+  "fees": 1.9500000000000002,
+  "shares": 100,
+  "put_strike": 235.0,
+  "call_strike": 235.0
+}

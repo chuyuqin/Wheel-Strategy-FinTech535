@@ -1,0 +1,16 @@
+{
+  "retrieved_at": "2026-11-16T23:43:51.860214+00:00",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS3MO&cosd=2022-12-01&coed=2024-10-01",
+  "series": "DGS3MO",
+  "units": "percent per annum, investment basis",
+  "rates_sha256": "1c1dcc4120726a33e2126fd2590b5d1ba16453078eceee1ee6932c86422a5010",
+  "source_hashes": {
+    "src/rates_revision.py": "350b0700a7dfa95ecee53f0633f9fc1f72dbdf819719428025d1aada9ae7b51f",
+    "src/revise_research.py": "e9261afd2d4f9757dd3daabc883e852bbdf6563b01372799d7494395a9d7342c",
+    "src/comparison_engine.py": "116e08e3dc020ae57132f8cb8b05b53cc7763acaa4342837fc18a50de8ffd7f7",
+    "src/backtest.py": "6887c0211163d8141a478fe2fef23bafdec9c9b25d23f6f4ec3b0bd216182eeb"
+  },
+  "conventions": "Lagged daily yield; ACT/365; free cash excludes put collateral; no interest on dividend receivables; no ALFRED vintage reconstruction",
+  "old_sample": "2023-01-03 through 2024-09-30; 2024 restart overlaps main sample",
+  "performance_claim": "Descriptive corrected rerun, not new out-of-sample evidence"
+}

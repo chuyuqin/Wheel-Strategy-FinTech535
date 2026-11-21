@@ -1,0 +1,177 @@
+{
+  "status": "passed",
+  "unit_tests": 21,
+  "raw_responses_verified": 102,
+  "runs_replayed": 31,
+  "events_replayed": 856,
+  "daily_portfolios_reconciled": 8147,
+  "freeze_hashes_verified": true,
+  "test_responses_retrieved_after_freeze": true,
+  "runs": [
+    {
+      "events": 30,
+      "sessions": 250,
+      "folder": "study/diagnostic/p30_c15_d21"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "study/diagnostic/p30_c15_d35"
+    },
+    {
+      "events": 24,
+      "sessions": 250,
+      "folder": "study/diagnostic/p30_c30_d21"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "study/diagnostic/p30_c30_d35"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "study/diagnostic/p45_c15_d21"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "study/diagnostic/p45_c15_d35"
+    },
+    {
+      "events": 22,
+      "sessions": 250,
+      "folder": "study/diagnostic/p45_c30_d21"
+    },
+    {
+      "events": 24,
+      "sessions": 250,
+      "folder": "study/diagnostic/p45_c30_d35"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "study/training/p30_c15_d21"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "study/training/p30_c15_d35"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "study/training/p30_c30_d21"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "study/training/p30_c30_d35"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "study/training/p45_c15_d21"
+    },
+    {
+      "events": 24,
+      "sessions": 250,
+      "folder": "study/training/p45_c15_d35"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "study/training/p45_c30_d21"
+    },
+    {
+      "events": 22,
+      "sessions": 250,
+      "folder": "study/training/p45_c30_d35"
+    },
+    {
+      "events": 28,
+      "sessions": 252,
+      "folder": "study/validation/p30_c15_d21"
+    },
+    {
+      "events": 26,
+      "sessions": 252,
+      "folder": "study/validation/p30_c15_d35"
+    },
+    {
+      "events": 28,
+      "sessions": 252,
+      "folder": "study/validation/p30_c30_d21"
+    },
+    {
+      "events": 26,
+      "sessions": 252,
+      "folder": "study/validation/p30_c30_d35"
+    },
+    {
+      "events": 30,
+      "sessions": 252,
+      "folder": "study/validation/p45_c15_d21"
+    },
+    {
+      "events": 22,
+      "sessions": 252,
+      "folder": "study/validation/p45_c15_d35"
+    },
+    {
+      "events": 30,
+      "sessions": 252,
+      "folder": "study/validation/p45_c30_d21"
+    },
+    {
+      "events": 20,
+      "sessions": 252,
+      "folder": "study/validation/p45_c30_d35"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "selected/diagnostic"
+    },
+    {
+      "events": 80,
+      "sessions": 752,
+      "folder": "selected/historical"
+    },
+    {
+      "events": 26,
+      "sessions": 209,
+      "folder": "selected/test"
+    },
+    {
+      "events": 26,
+      "sessions": 250,
+      "folder": "selected/training"
+    },
+    {
+      "events": 30,
+      "sessions": 252,
+      "folder": "selected/validation"
+    },
+    {
+      "events": 26,
+      "sessions": 209,
+      "folder": "stress/early_assignment"
+    },
+    {
+      "events": 26,
+      "sessions": 209,
+      "folder": "stress/wider_fills"
+    }
+  ],
+  "checks": [
+    "event cash and quantity replay",
+    "put cash collateral and call share cover",
+    "actual raw execution quotes",
+    "prior-session delta and liquidity eligibility",
+    "daily market value identities",
+    "terminal flat positions",
+    "benchmark cash reconciliation",
+    "raw response and frozen source hashes"
+  ]
+}

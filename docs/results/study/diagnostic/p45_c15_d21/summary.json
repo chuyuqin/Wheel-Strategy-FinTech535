@@ -1,0 +1,74 @@
+{
+  "config": {
+    "start": "2025-01-02",
+    "end": "2025-12-31",
+    "initial_cash": 50000,
+    "delta_target": 0.3,
+    "delta_min": 0.15,
+    "delta_max": 0.4,
+    "dte_min": 14,
+    "dte_max": 28,
+    "dte_target": 21,
+    "max_relative_spread": 0.25,
+    "max_absolute_spread": 1,
+    "min_volume": 100,
+    "min_open_interest": 500,
+    "option_fee": 0.65,
+    "extra_spread_fraction": 0,
+    "cash_rate": 0,
+    "roll_dte": 0,
+    "early_assignment_stress": false,
+    "max_carried_sessions": 2,
+    "allocation_fraction": 0.9,
+    "put_delta": 0.45,
+    "call_delta": 0.15,
+    "delta_tolerance": 0.1,
+    "call_cost_floor": true
+  },
+  "wheel": {
+    "ending_equity": 52200.89999999998,
+    "net_profit": 2200.8999999999796,
+    "total_return": 0.04401799999999967,
+    "cagr": 0.04417245126637481,
+    "max_drawdown": -0.11646430601603641,
+    "annualized_volatility": 0.1336050470204498,
+    "sharpe_zero_rf": 0.39141067129722046,
+    "annual_returns": {
+      "2025": 0.04401799999999967
+    },
+    "contracts_sold": 13,
+    "mean_capital_usage": 0.43616321159535465,
+    "option_opens": 12,
+    "option_closes": 1,
+    "put_assignments": 1,
+    "call_assignments": 0,
+    "expirations": 10,
+    "fees": 9.100000000000001,
+    "premium_received": 2197.0,
+    "buyback_cost": 69.0,
+    "stock_cashflow": 82.0,
+    "carried_mark_days": 0,
+    "skip_reasons": {
+      "no_eligible_P": 5,
+      "no_eligible_C": 37
+    },
+    "stock_exposure_fraction": 0.864,
+    "mean_reserved_cash": 3240.0,
+    "events": 26
+  },
+  "buy_hold": {
+    "ending_equity": 52404.30459065522,
+    "net_profit": 2404.3045906552215,
+    "total_return": 0.048086091813104526,
+    "cagr": 0.04825514435223721,
+    "max_drawdown": -0.3090142939767,
+    "annualized_volatility": 0.34266101503996194,
+    "sharpe_zero_rf": 0.30782206162876424,
+    "annual_returns": {
+      "2025": 0.048086091813104526
+    }
+  },
+  "excess_return": -0.004068091813104857,
+  "relative_wealth": -0.0038814481414092272,
+  "sessions": 250
+}

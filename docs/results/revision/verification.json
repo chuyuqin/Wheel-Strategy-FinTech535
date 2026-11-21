@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "economic_cases": 16,
+  "account_paths": 48,
+  "unit_tests": 10,
+  "checks": [
+    "cash event replay",
+    "daily cash reconstruction",
+    "equity identity",
+    "previous-close free-cash interest principal",
+    "lagged calendar-day accrual including weekends",
+    "Treasury-excess returns",
+    "PnL contribution identity"
+  ]
+}

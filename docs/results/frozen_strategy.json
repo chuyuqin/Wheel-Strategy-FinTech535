@@ -1,0 +1,77 @@
+{
+  "frozen_utc": "2026-11-01T22:11:32.875576+00:00",
+  "selected_id": "p45_c15_d21",
+  "config": {
+    "start": "2023-01-03",
+    "end": "2025-12-31",
+    "initial_cash": 50000,
+    "delta_target": 0.3,
+    "delta_min": 0.15,
+    "delta_max": 0.4,
+    "dte_min": 14,
+    "dte_max": 28,
+    "dte_target": 21,
+    "max_relative_spread": 0.25,
+    "max_absolute_spread": 1,
+    "min_volume": 100,
+    "min_open_interest": 500,
+    "option_fee": 0.65,
+    "extra_spread_fraction": 0,
+    "cash_rate": 0,
+    "roll_dte": 0,
+    "early_assignment_stress": false,
+    "max_carried_sessions": 2,
+    "allocation_fraction": 0.9,
+    "put_delta": 0.45,
+    "call_delta": 0.15,
+    "delta_tolerance": 0.1,
+    "call_cost_floor": true
+  },
+  "selection_rule": "Highest 2023 net account return; ties resolved by smaller drawdown, then configuration ID. No reselection using later periods.",
+  "plan_sha256": "b5b07b18336ae337bc24aba48c74f908592894427b85aae417724ce9235a2768",
+  "engine_sha256": "6887c0211163d8141a478fe2fef23bafdec9c9b25d23f6f4ec3b0bd216182eeb",
+  "research_script_sha256": "ebdc9031b735c13cdc1c04e1af078678be02d4650ee3648f2450c7a1409ad3f8",
+  "training_input_sha256": "91ad37941f69c35551b415354690d501e56b423ba23423ee66b889eaf86b2ae0",
+  "training_ranking": [
+    {
+      "id": "p45_c15_d21",
+      "return_": 0.44075700000000007,
+      "max_drawdown": -0.05898218120050058
+    },
+    {
+      "id": "p45_c30_d21",
+      "return_": 0.3760370000000002,
+      "max_drawdown": -0.05088237287000352
+    },
+    {
+      "id": "p45_c15_d35",
+      "return_": 0.36259699999999984,
+      "max_drawdown": -0.10434228050038985
+    },
+    {
+      "id": "p45_c30_d35",
+      "return_": 0.3284950000000002,
+      "max_drawdown": -0.10436449043663942
+    },
+    {
+      "id": "p30_c15_d35",
+      "return_": 0.2774300000000005,
+      "max_drawdown": -0.06687944730901496
+    },
+    {
+      "id": "p30_c15_d21",
+      "return_": 0.23171200000000036,
+      "max_drawdown": -0.02459679128209946
+    },
+    {
+      "id": "p30_c30_d21",
+      "return_": 0.23171200000000036,
+      "max_drawdown": -0.02459679128209946
+    },
+    {
+      "id": "p30_c30_d35",
+      "return_": 0.2261030000000004,
+      "max_drawdown": -0.06031422179351853
+    }
+  ]
+}

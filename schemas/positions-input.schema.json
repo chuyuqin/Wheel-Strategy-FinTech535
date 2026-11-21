@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Local positions adapter contract; professor has not published a book schema",
+  "type": "object",
+  "required": ["as_of", "cash", "positions"],
+  "properties": {
+    "as_of": {"type": "string", "format": "date"},
+    "cash": {"type": "number", "minimum": 0},
+    "positions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["underlying", "contract", "qty"],
+        "properties": {
+          "underlying": {"type": "integer", "minimum": 1},
+          "contract": {"enum": ["underlying", "put", "call"]},
+          "qty": {"type": "integer"},
+          "cost_basis": {"type": "number", "exclusiveMinimum": 0}
+        }
+      }
+    }
+  }
+}

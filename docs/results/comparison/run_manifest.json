@@ -1,0 +1,22 @@
+{
+  "run_utc": "2026-11-01T23:08:37.064450+00:00",
+  "plan_sha256": "e3b9d8ac05ba31ea7a025dbea0db5f2b7120fac015ccca63524ce05024f5a675",
+  "original_freeze_sha256": "8e5f0c8894a2b51f068b425dd4c9bc8ff6bd75f0ccd162ae7b58464a225fb877",
+  "source_hashes": {
+    "src/comparison_engine.py": "116e08e3dc020ae57132f8cb8b05b53cc7763acaa4342837fc18a50de8ffd7f7",
+    "src/compare_stocks.py": "8e3b993e4188f488fd558eaf96f85ec8b6457daf7d0af0352c9bb8df9e756811",
+    "src/fetch_comparison.py": "10ef7befe7db183dfebeb618947e2b2bb91923904503653a1b13fcee0d1e4719"
+  },
+  "amzn_parity": {
+    "historical": {
+      "wheel_unchanged": true,
+      "benchmark_unchanged": true,
+      "reference": "original frozen engine rerun on the matched comparison dates"
+    },
+    "test": {
+      "wheel_unchanged": true,
+      "benchmark_unchanged": true,
+      "reference": "original frozen engine rerun on the matched comparison dates"
+    }
+  }
+}

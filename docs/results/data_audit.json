@@ -1,0 +1,580 @@
+{
+  "stock_sessions": 752,
+  "first_session": "2023-01-03",
+  "last_session": "2025-12-31",
+  "candidate_contracts": 4028,
+  "contracts_observed": 3168,
+  "option_day_records": 149106,
+  "positive_two_sided_quotes": 127322,
+  "crossed_quotes": 0,
+  "verified_responses": 77,
+  "stock_response": {
+    "request": {
+      "universe": "AMZN.O",
+      "fields": [
+        "OPEN_PRC",
+        "HIGH_1",
+        "LOW_1",
+        "TRDPRC_1",
+        "BID",
+        "ASK",
+        "ACVOL_UNS"
+      ],
+      "start": "2022-12-01",
+      "end": "2025-12-31",
+      "interval": "1D",
+      "adjustments": "unadjusted",
+      "count": 2000
+    },
+    "retrieved_utc": "2026-10-06T21:42:43.924104+00:00",
+    "rows": 773,
+    "columns": [
+      "OPEN_PRC",
+      "HIGH_1",
+      "LOW_1",
+      "TRDPRC_1",
+      "BID",
+      "ASK",
+      "ACVOL_UNS"
+    ],
+    "non_null_cells": 5411,
+    "first_observation": "2022-12-01 00:00:00",
+    "last_observation": "2025-12-31 00:00:00",
+    "sha256": "d5d6aa47f74e8dde039c5c94318af93290ec2786b63f581b5d5759b260d4ef42",
+    "library_version": "2.1.1"
+  },
+  "option_responses": [
+    {
+      "file": "calls_2023-01-20.csv",
+      "sha256": "0cd24c757299e6a0fe16b7fb4dbd790bacc2014a2a00fdbea0fcf12bc60ed58d",
+      "retrieved_utc": "2026-10-06T21:43:00.318871+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 46
+    },
+    {
+      "file": "puts_2023-01-20.csv",
+      "sha256": "3d30b07a394fb2f997bbb15558b89d6f24cdb37422b07a6f97a816beac86e761",
+      "retrieved_utc": "2026-11-01T21:45:33.507102+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 46
+    },
+    {
+      "file": "calls_2023-02-17.csv",
+      "sha256": "b60e1c66b7723fd3c36bdd2e50d30abe0200a755a654dfad250eea1952ed20fc",
+      "retrieved_utc": "2026-10-06T21:39:22.868595+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 33
+    },
+    {
+      "file": "puts_2023-02-17.csv",
+      "sha256": "3e9050e13fb01825888a9f941ca47340422ab1ec7599c0993c6538d70a04133f",
+      "retrieved_utc": "2026-11-01T21:45:45.866384+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 33
+    },
+    {
+      "file": "calls_2023-03-17.csv",
+      "sha256": "e8296fe6b07f4f8410c3fcebc22b8cfe0e3fa5ea33bebbb1f683ee63f838204c",
+      "retrieved_utc": "2026-10-06T21:39:39.524108+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 46
+    },
+    {
+      "file": "puts_2023-03-17.csv",
+      "sha256": "9ec65e472886e8b21e029559abb43a39e4ae3245132fc789d298fffd0c0959e3",
+      "retrieved_utc": "2026-11-01T21:45:59.056701+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 46
+    },
+    {
+      "file": "calls_2023-04-21.csv",
+      "sha256": "1e91baa330782457e9e9591d51b0df7599670417e6d8e4ca76baccddc515c8ba",
+      "retrieved_utc": "2026-10-06T21:40:02.478484+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 35
+    },
+    {
+      "file": "puts_2023-04-21.csv",
+      "sha256": "ab5bdd0195865922770c315737fff26d9d63f89f6c62f7af7bf87be91f88c1cf",
+      "retrieved_utc": "2026-11-01T21:46:11.853046+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 35
+    },
+    {
+      "file": "calls_2023-05-19.csv",
+      "sha256": "f86fcf715a59acb50ac30cc0bfb2ae2813631d510e8f0d856703e14077454256",
+      "retrieved_utc": "2026-10-06T21:40:20.182126+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 23
+    },
+    {
+      "file": "puts_2023-05-19.csv",
+      "sha256": "1c665cc3e1674c7ab54f1e553dd73ed84f304d8c86fa72207c0205577e0734f4",
+      "retrieved_utc": "2026-11-01T21:46:23.734415+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 23
+    },
+    {
+      "file": "calls_2023-06-16.csv",
+      "sha256": "d1bb5f458b71b6e499828070c24b34a0718824bc0d06ed3e3d7d226005a1327a",
+      "retrieved_utc": "2026-10-06T21:40:42.864514+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 47
+    },
+    {
+      "file": "puts_2023-06-16.csv",
+      "sha256": "6f7e8f5698d16a8a09c510b91f146c0d2879c01a716f3008fad5c7bff84658f6",
+      "retrieved_utc": "2026-11-01T21:46:36.941534+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 47
+    },
+    {
+      "file": "calls_2023-07-21.csv",
+      "sha256": "26b1fc115ed24f493ad069139a52f06825d1dee85b6c4143dc1eca28dea1efe8",
+      "retrieved_utc": "2026-10-06T21:41:04.708965+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 34
+    },
+    {
+      "file": "puts_2023-07-21.csv",
+      "sha256": "8e5c3e5e55cc99a2ad28be8a9e518018129a577b8388d87cfcd4481d97828637",
+      "retrieved_utc": "2026-11-01T21:46:49.456604+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 34
+    },
+    {
+      "file": "calls_2023-08-18.csv",
+      "sha256": "e915a7dbbbe386f58896a9077f3399b2fc3b6dc48d383dcaa4766062b4697df5",
+      "retrieved_utc": "2026-10-06T21:41:21.487854+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 30
+    },
+    {
+      "file": "puts_2023-08-18.csv",
+      "sha256": "b7f4270eb41e0094ce233ca999ebd2ee05f664a983e84e39b24c647d7664b1ad",
+      "retrieved_utc": "2026-11-01T21:47:01.761458+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 30
+    },
+    {
+      "file": "calls_2023-09-15.csv",
+      "sha256": "32297b7564bc25024445e04d0eba7f43a7cdb171f92bcce8ed8f34897aaa5de3",
+      "retrieved_utc": "2026-10-06T21:41:55.433579+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 42
+    },
+    {
+      "file": "puts_2023-09-15.csv",
+      "sha256": "85f42f51d74d40b054f96b47b347fd2fe30252d402efbd8c0cd2b2b33d18f294",
+      "retrieved_utc": "2026-11-01T21:47:14.754734+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 42
+    },
+    {
+      "file": "calls_2023-10-20.csv",
+      "sha256": "9f574716a7cc13696ac376235b6d3365a667e32d906178bda413bb2fc74f148b",
+      "retrieved_utc": "2026-10-06T21:42:21.865871+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 33
+    },
+    {
+      "file": "puts_2023-10-20.csv",
+      "sha256": "68a98a044cf6ed5675e56e48b11ff3fbf98b52697be3b3d1438372ad8af39dd0",
+      "retrieved_utc": "2026-11-01T21:47:27.101911+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 33
+    },
+    {
+      "file": "calls_2023-11-17.csv",
+      "sha256": "ef81dc45554beae8da0315095da5a336108ccf1e8ed2e0a1dc1b1a52f8265358",
+      "retrieved_utc": "2026-10-06T21:42:49.862614+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 31
+    },
+    {
+      "file": "puts_2023-11-17.csv",
+      "sha256": "29619de8372e4c8e305d43da50fe485e518b52504b5042d25324b81fd50e9008",
+      "retrieved_utc": "2026-11-01T21:47:39.558804+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 31
+    },
+    {
+      "file": "calls_2023-12-15.csv",
+      "sha256": "35b5571c1be24efec6d698ee64a0fabf04675cb40e2722b943125bdd9d1d547f",
+      "retrieved_utc": "2026-10-06T21:43:11.982397+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 30
+    },
+    {
+      "file": "puts_2023-12-15.csv",
+      "sha256": "bb9b79f7a35ea9a53b1e76c83edb4d1a58871c57db47114ff39d1afb3612eaf3",
+      "retrieved_utc": "2026-11-01T21:47:51.819571+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 30
+    },
+    {
+      "file": "calls_2024-01-19.csv",
+      "sha256": "480a53a9b402775a5334816ef2f19232a461c5803b68a5a230faad7ac32707bf",
+      "retrieved_utc": "2026-10-06T21:43:52.520530+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 46
+    },
+    {
+      "file": "puts_2024-01-19.csv",
+      "sha256": "1a88370e975bf9cbecf573e5301fb0f0a4c0a36bc3fc0df7042c1ae1e24f21a6",
+      "retrieved_utc": "2026-11-01T21:48:04.808025+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 46
+    },
+    {
+      "file": "calls_2024-02-16.csv",
+      "sha256": "39886a3385b32ceeac7b428c8f30195cf35623b36aafd127eefaf57e61d32553",
+      "retrieved_utc": "2026-10-06T21:44:14.164138+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 38
+    },
+    {
+      "file": "puts_2024-02-16.csv",
+      "sha256": "2cc0817da6aebe065bf561d46104867a6f3157fdcf984b2216696005316c5d06",
+      "retrieved_utc": "2026-11-01T21:48:17.261463+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 38
+    },
+    {
+      "file": "calls_2024-03-15.csv",
+      "sha256": "2100c946cbfab598a4a2cb9508cea3ea05a04974f515280667ce10cc84246654",
+      "retrieved_utc": "2026-10-06T21:44:41.335023+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 42
+    },
+    {
+      "file": "puts_2024-03-15.csv",
+      "sha256": "85027f8497f9376abbc6a8c5ed8bf9a66f0232eb0ce771c3e01f599984c01551",
+      "retrieved_utc": "2026-11-01T21:48:30.177810+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 42
+    },
+    {
+      "file": "calls_2024-04-19.csv",
+      "sha256": "016f49864bd3200299f4c9326f3eae7aea515e33bedce6cfb1aa5c017c8746a3",
+      "retrieved_utc": "2026-10-06T21:45:02.852329+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 39
+    },
+    {
+      "file": "puts_2024-04-19.csv",
+      "sha256": "eede7f18b8c588a2d3be9e424612df9ba1403513ee89a9b7cad610da5c05fcc0",
+      "retrieved_utc": "2026-11-01T21:48:43.122448+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 39
+    },
+    {
+      "file": "calls_2024-05-17.csv",
+      "sha256": "942ee48ff89a8b177e91ed6f60522aa6c101a7a4f42f9e25199de3c2df3f67f6",
+      "retrieved_utc": "2026-10-06T21:45:25.482876+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 39
+    },
+    {
+      "file": "puts_2024-05-17.csv",
+      "sha256": "2e85ee54bc182da3813ae335712a41902de7a28bade1d623e44005b526d3ca79",
+      "retrieved_utc": "2026-11-01T21:48:55.995995+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 39
+    },
+    {
+      "file": "calls_2024-06-21.csv",
+      "sha256": "634695d5c9c9d57c15310c6cf1fbe6631d28a8aed4d33863979f45250d4c0f8e",
+      "retrieved_utc": "2026-10-06T21:46:02.476234+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 47
+    },
+    {
+      "file": "puts_2024-06-21.csv",
+      "sha256": "9b7c7253d6c3ab6e88919e6974c109e0a71141b2a890687b0705fc06fdba9349",
+      "retrieved_utc": "2026-11-01T21:49:09.280068+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 47
+    },
+    {
+      "file": "calls_2024-07-19.csv",
+      "sha256": "4dbdf0c76001ea1b8bfa089d17e98856b861d1e178cb37c905509170c7c6a774",
+      "retrieved_utc": "2026-10-06T21:46:23.506181+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 42
+    },
+    {
+      "file": "puts_2024-07-19.csv",
+      "sha256": "09af58dfed291e6bb7e844e33bca8bae1de6eb382e82d03b41c35a05cad1d760",
+      "retrieved_utc": "2026-11-01T21:49:22.093705+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 42
+    },
+    {
+      "file": "calls_2024-08-16.csv",
+      "sha256": "e2ed0da682c80af5316de90d2f4de56c3a18d7f29e677c4cf9ba9732beb2e236",
+      "retrieved_utc": "2026-10-06T21:46:44.407260+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 41
+    },
+    {
+      "file": "puts_2024-08-16.csv",
+      "sha256": "cb5e040bdb49803625b32114ca9063905d461c73f6b5ef7de85d1e6b3956b22e",
+      "retrieved_utc": "2026-11-01T21:49:34.993581+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 41
+    },
+    {
+      "file": "calls_2024-09-20.csv",
+      "sha256": "dd699c47c40c1d6b11f1807807e78fe1db0026374cf72b470ece0e5571995ce1",
+      "retrieved_utc": "2026-10-06T21:47:31.709565+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 51
+    },
+    {
+      "file": "puts_2024-09-20.csv",
+      "sha256": "0aaf8bce187f5b08579f1fecee6f18f8cfdafe06608a440a3dab92c90c79f690",
+      "retrieved_utc": "2026-11-01T21:49:48.605617+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 51
+    },
+    {
+      "file": "calls_2024-10-18.csv",
+      "sha256": "b6c7a8078e46181931b11287f9c1e4da5f614d98dd6724eed36af1030b888680",
+      "retrieved_utc": "2026-10-06T21:48:05.031138+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 40
+    },
+    {
+      "file": "puts_2024-10-18.csv",
+      "sha256": "7cadb53a7a001b89fc264f0ce28c9efbc38fc7e2984c05b9553dda332e401a4d",
+      "retrieved_utc": "2026-11-01T21:50:01.515041+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 40
+    },
+    {
+      "file": "calls_2024-11-15.csv",
+      "sha256": "eb2f0d94243b095f7add822cb9e3036d405076fb0cb5bad8c5ab80a3e1108ad0",
+      "retrieved_utc": "2026-10-06T21:48:34.448108+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 42
+    },
+    {
+      "file": "puts_2024-11-15.csv",
+      "sha256": "786ef8a3eea6158261e4cb34204434e5387ff9484809b7334d9916cf9eb982f9",
+      "retrieved_utc": "2026-11-01T21:50:14.571825+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 42
+    },
+    {
+      "file": "calls_2024-12-20.csv",
+      "sha256": "ec63dda26e888e707213ea30107bfbc315aa03ac5e56c05f5b1ceb56fab131f2",
+      "retrieved_utc": "2026-10-06T21:49:02.168791+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 45
+    },
+    {
+      "file": "puts_2024-12-20.csv",
+      "sha256": "7cc8e73cfd56972042b4e936434eff040cf772594c5576bdd9b46676d57de4c8",
+      "retrieved_utc": "2026-11-01T21:50:27.672207+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 45
+    },
+    {
+      "file": "calls_2025-01-17.csv",
+      "sha256": "84097c148cd1885d78dde2a6a7da9620f95357886cb0ea5a115b1df1dd480c75",
+      "retrieved_utc": "2026-10-06T21:49:50.075325+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 51
+    },
+    {
+      "file": "puts_2025-01-17.csv",
+      "sha256": "72f455cf2401cfead32e70b4575dac935c9054f940c822fbef1d4468b4718482",
+      "retrieved_utc": "2026-11-01T21:50:41.123456+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 51
+    },
+    {
+      "file": "calls_2025-02-21.csv",
+      "sha256": "a1c60889f7e9173729bb790886abeb09eb2c8046c7d20da91171edbbfe3becf1",
+      "retrieved_utc": "2026-10-06T21:39:10.038152+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "puts_2025-02-21.csv",
+      "sha256": "ea9f4673fd5ad7b8b7a354995edd65ae3c0cd5f6f16f77c671bc87fb9d93287b",
+      "retrieved_utc": "2026-11-01T21:50:54.087175+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "calls_2025-03-21.csv",
+      "sha256": "29f945f9550bfe9880ecf99f024984357808265a585fc576d7290579843cc6c1",
+      "retrieved_utc": "2026-10-06T21:39:41.487159+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 45
+    },
+    {
+      "file": "puts_2025-03-21.csv",
+      "sha256": "d027d666abcf0ea1a9bddaab7d9744b0a16cbb9a93c708e4c6a1316316a28a3b",
+      "retrieved_utc": "2026-11-01T21:51:07.272940+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 45
+    },
+    {
+      "file": "calls_2025-04-17.csv",
+      "sha256": "692b2a00b305d4fccb8d37da7af3d957a42a1af5cf072e0eff3c44c513cd43a6",
+      "retrieved_utc": "2026-10-06T21:40:09.998299+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "puts_2025-04-17.csv",
+      "sha256": "d4ef7d825a55f692159443b589929d1e501f693420ed893d46c7f63f18fea73c",
+      "retrieved_utc": "2026-11-01T21:51:20.453204+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "calls_2025-05-16.csv",
+      "sha256": "60d41407981eb801846fee586f386a1a4e2621281f0ee0da47e8cd5dbe9b6519",
+      "retrieved_utc": "2026-10-06T21:40:34.470562+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "puts_2025-05-16.csv",
+      "sha256": "8f665f259952889c3f6e66cb622a77af4967ce35653f150dc8199a40fa7fd315",
+      "retrieved_utc": "2026-11-01T21:51:33.555286+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "calls_2025-06-20.csv",
+      "sha256": "3895e6c5e6ee4ea6887492b3c05e6bac370a534f761c2c67cadb81380924eabb",
+      "retrieved_utc": "2026-10-06T21:41:17.806287+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 52
+    },
+    {
+      "file": "puts_2025-06-20.csv",
+      "sha256": "7136a3eb86355ef92620a545f2de2acbf0c42afe05a6727f0420188468bc1641",
+      "retrieved_utc": "2026-11-01T21:51:47.064742+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 52
+    },
+    {
+      "file": "calls_2025-07-18.csv",
+      "sha256": "0c1879a6469af6bb1e1c3d13ee7b39e1879f92f071648a03d2047676d9a26487",
+      "retrieved_utc": "2026-10-06T21:41:47.453553+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "puts_2025-07-18.csv",
+      "sha256": "973e87a807168d92e9dbe2dd71f09fbfc4b5fd57817f018af550b48420cba8cb",
+      "retrieved_utc": "2026-11-01T21:53:41.391616+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "calls_2025-08-15.csv",
+      "sha256": "6ed02687a9c9c028875bb7d387f0bf6515a2f6791ed453d6be7e0fbb9cdaffb5",
+      "retrieved_utc": "2026-10-06T21:42:20.717161+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "puts_2025-08-15.csv",
+      "sha256": "134f4b78f05a17e940a0564b1f3eb167f868a52392632daf1887edf240ea6fa3",
+      "retrieved_utc": "2026-11-01T21:53:55.234885+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "calls_2025-09-19.csv",
+      "sha256": "c81863390661f691ca725aace4e2d78b47e601e1823e8dd2d688ff494bc752f4",
+      "retrieved_utc": "2026-10-06T21:43:09.397416+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 48
+    },
+    {
+      "file": "puts_2025-09-19.csv",
+      "sha256": "18957b621b7fcfda345f8be090eaedceb47225220ed04238ede665043a46d62c",
+      "retrieved_utc": "2026-11-01T21:54:08.754168+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 48
+    },
+    {
+      "file": "calls_2025-10-17.csv",
+      "sha256": "55cdfca44411293bcf97fa2f7f2470132ea705a59224a00c5d7b8d9aa46b7710",
+      "retrieved_utc": "2026-10-06T21:43:43.024298+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "puts_2025-10-17.csv",
+      "sha256": "109a81ee90eb39241e7c5f930c2b600b3cf9449fefbd3729c8d5f149ff794de6",
+      "retrieved_utc": "2026-11-01T21:54:21.935908+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "calls_2025-11-21.csv",
+      "sha256": "51a3d4cb3be79d09199cb788db2a4c22b35cfaa166dd50c032b97cc501e9bf4b",
+      "retrieved_utc": "2026-10-06T21:44:06.262692+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "puts_2025-11-21.csv",
+      "sha256": "ab1970b37fcb10174719c64c0e9e211cabc6a78751ba3f0635f4e09e9a8130c1",
+      "retrieved_utc": "2026-11-01T21:54:35.167149+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 44
+    },
+    {
+      "file": "calls_2025-12-19.csv",
+      "sha256": "d7bed335d0f2e7c02b08ad799be681995c27bcd24335ae0159e59d6d8f1493ba",
+      "retrieved_utc": "2026-10-06T21:44:58.836240+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 51
+    },
+    {
+      "file": "puts_2025-12-19.csv",
+      "sha256": "207ecce967d240c6403363f0d5601d688cb28e23ba51bbad4fe7ffb58bdd0909",
+      "retrieved_utc": "2026-11-01T21:54:48.797790+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 51
+    },
+    {
+      "file": "calls_2026-01-16.csv",
+      "sha256": "aadd84b31b3878bf59cf80128d0f5f810b230c3e107154ee5431ad99612d49ce",
+      "retrieved_utc": "2026-10-06T21:45:51.537696+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 48
+    },
+    {
+      "file": "puts_2026-01-16.csv",
+      "sha256": "10710fd916f0202d158341b85b4ca0dd1cb2d145c88758c6c38b1a3bbc50c6ee",
+      "retrieved_utc": "2026-11-01T21:55:01.488927+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 48
+    },
+    {
+      "file": "calls_2026-02-20.csv",
+      "sha256": "44870b991988f7561d91430bcb8a137f2607091a598272817ac3515a440972ad",
+      "retrieved_utc": "2026-10-06T21:46:11.882057+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 39
+    },
+    {
+      "file": "puts_2026-02-20.csv",
+      "sha256": "b4590f39cd5dd6b3a4affbec9c68c6ed023f11677b641a97448f4db5b0e354bf",
+      "retrieved_utc": "2026-11-01T21:55:12.758147+00:00",
+      "candidate_contracts": 53,
+      "contracts_observed": 39
+    }
+  ]
+}

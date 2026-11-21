@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-11-21T03:50:27.532887+00:00",
+  "manual_workflow_run": "https://github.com/chuyuqin/Wheel-Strategy-FinTech535/actions/runs/44862897726",
+  "manual_run_conclusion": "success",
+  "deployment_run": "https://github.com/chuyuqin/Wheel-Strategy-FinTech535/actions/runs/44862946132",
+  "deployment_conclusion": "success",
+  "local_unit_tests": {
+    "passed": 54,
+    "failed": 0
+  },
+  "automatic_runs_observed": {
+    "dates_utc": [
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20"
+    ],
+    "all_successful": true
+  },
+  "checks": {
+    "order_schema": "passed",
+    "root_mkt_site_copies_identical": "passed",
+    "unique_commitment_ids": "passed",
+    "integer_conid_matches_price_file": "passed",
+    "counts_match_current_target": "passed"
+  },
+  "latest_signal_session": "2026-11-20",
+  "next_session": "2026-11-23",
+  "data_lag_sessions": 0,
+  "new_order_count": 0,
+  "active_order_count": 0,
+  "current_decision": "awaiting_server_book: a prior paper commitment is still reserved",
+  "retained_order_sessions": [
+    "2026-11-17"
+  ],
+  "positions_file_present": false,
+  "fills_file_present": false,
+  "limits": [
+    "No current authoritative positions file: a new wheel commitment is withheld.",
+    "The retained November 17 order is historical, not an active November 23 ticket.",
+    "The course order menu still states that Sanji does not resolve orders yet.",
+    "Numeric option strikes/limits are not a verified option-chain quote; fills are not established.",
+    "The $50,000 initial paper budget is a documented assumption, not a reported account balance."
+  ],
+  "specification_source": "https://jakevestal.github.io/server-logic-533/order.html",
+  "specification_sha256": "c8cf16b718a990d04e4f423658a434491503d8d5e303808b34f7a2432dc6ebe2",
+  "price_input_sha256": "db586d9ac5420edc78fd6d255ea168aa41fb33949f14a8829787343e9548ba0f"
+}

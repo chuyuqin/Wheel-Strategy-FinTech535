@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-11-21T03:47:54.247666+00:00",
+  "status": "waiting",
+  "orders_count": 1,
+  "strategy": "wheel-final-v1",
+  "paper_only": true,
+  "broker_connected": false,
+  "execution_context": "github_actions",
+  "price_sha256": "db586d9ac5420edc78fd6d255ea168aa41fb33949f14a8829787343e9548ba0f",
+  "workflow_run_url": "https://github.com/chuyuqin/Wheel-Strategy-FinTech535/actions/runs/44862897726",
+  "completed_session": "2026-11-20",
+  "target_session": "2026-11-23",
+  "underlying": 272093,
+  "asset_name": "MICROSOFT CORPORATION",
+  "signal_session": "2026-11-20",
+  "price_lag_sessions": 0,
+  "max_price_lag_sessions": 1,
+  "reason": "awaiting_server_book: a prior paper commitment is still reserved",
+  "new_orders_count": 0,
+  "active_orders_count": 0,
+  "orders_sha256": "9043604068acf1033d091698fda3345b4fdb282fc3e754be86a2a488a856d74c"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sanji order subset used by this strategy",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "for", "order_type", "action", "qty", "underlying", "contract", "expiry", "strike", "ref", "lmt_prc"],
+    "properties": {
+      "id": {"type": "string", "minLength": 1},
+      "for": {"type": "string", "format": "date"},
+      "order_type": {"const": "lmt"},
+      "action": {"const": "SHT"},
+      "qty": {"type": "integer", "minimum": 1},
+      "underlying": {"type": "integer", "minimum": 1},
+      "contract": {"enum": ["put", "call"]},
+      "expiry": {"const": "21DTE+"},
+      "strike": {"type": "number", "exclusiveMinimum": 0},
+      "ref": {"const": "prev_close"},
+      "lmt_prc": {"type": "number", "exclusiveMinimum": 0}
+    }
+  }
+}

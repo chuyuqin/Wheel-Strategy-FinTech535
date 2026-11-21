@@ -1,0 +1,65 @@
+{
+  "purpose": "Compare the fixed shortlist AMZN, KO, PG and VZ without selecting a stock or retuning wheel parameters from the comparison results.",
+  "periods": {
+    "historical": [
+      "2023-01-03",
+      "2025-12-31"
+    ],
+    "test": [
+      "2026-01-02",
+      "2026-10-30"
+    ]
+  },
+  "rules_source": "../../config.json and the original frozen_strategy.json",
+  "rules": {
+    "initial_cash": 50000,
+    "put_delta": 0.45,
+    "call_delta": 0.15,
+    "delta_tolerance": 0.1,
+    "dte_target": 21,
+    "dte_min": 14,
+    "dte_max": 28,
+    "allocation_fraction": 0.9,
+    "call_cost_floor": true,
+    "min_volume": 100,
+    "min_open_interest": 500,
+    "max_relative_spread": 0.25,
+    "max_absolute_spread": 1,
+    "option_fee": 0.65,
+    "cash_rate": 0
+  },
+  "universe": {
+    "AMZN": {
+      "ric": "AMZN.O",
+      "minimum": 40,
+      "maximum": 300,
+      "step": 5
+    },
+    "KO": {
+      "ric": "KO.N",
+      "minimum": 20,
+      "maximum": 120,
+      "step": 2.5
+    },
+    "PG": {
+      "ric": "PG.N",
+      "minimum": 60,
+      "maximum": 250,
+      "step": 5
+    },
+    "VZ": {
+      "ric": "VZ.N",
+      "minimum": 10,
+      "maximum": 80,
+      "step": 2.5
+    }
+  },
+  "dividends": "Use unadjusted stock prices. Accrue gross dividend entitlement on ex-date for shares owned before that session; include unpaid terminal receivables in equity. Credit spendable cash on pay date or the next observed session. Primary buy-and-hold reinvests paid cash at that session closing ask using fractional shares (except terminal liquidation date). Also report the original cash-dividend, non-reinvesting benchmark. No taxes.",
+  "assignment": "Baseline keeps expiration-only assignment, as in AMZN. Separately report an announced-dividend stress: remove in-the-money covered calls at the close immediately preceding ex-date when bid-side time value is below the announced dividend. This is a deterministic scenario, not actual exercise history.",
+  "fairness": "Same economic rules and quote filters; fixed ticker-appropriate standard strike grids, rather than the same dollar spacing for differently priced stocks. No changes to the historical AMZN freeze or engine.",
+  "interpretation": "Exploratory cross-stock comparison after the AMZN outcome was seen. The shortlist is fixed before returns are fetched; these are not a random stock sample or a fresh market holdout. Report every ticker, including insufficient liquidity or missing-data failures. Do not replace a failed ticker with a winner.",
+  "recorded_utc": "2026-11-01T22:33:43.891118+00:00",
+  "version": 2,
+  "benchmark_refinement_utc": "2026-11-01T22:43:46.712798+00:00",
+  "benchmark_refinement_reason": "Before any candidate return computation, add a fully invested dividend-reinvesting benchmark as primary. Preserve the originally specified cash-dividend benchmark as an explicit sensitivity. No change to the wheel rules, ticker list, dates or option grids."
+}

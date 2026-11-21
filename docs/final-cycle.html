@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Chuyu Qin's FINTECH 535 project: a nightly Microsoft wheel order planner using GitHub Actions and Sanji.">
+<title>MSFT Wheel Strategy | FINTECH 535</title>
+<link rel="stylesheet" href="assets/final-cycle.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><a class="brand" href="final-cycle.html">FINTECH 535 <span>/</span> CHUYU QIN</a><nav aria-label="Main"><a href="#strategy">Strategy</a><a href="#run">Latest run</a><a href="#automation">Workflow</a><a href="research-revision.html">Research</a></nav></header>
+<main id="main">
+<section class="hero">
+<p class="eyebrow">FINAL CYCLE / NOVEMBER 2026</p>
+<h1>MSFT Wheel Strategy</h1>
+<p class="lead">Using a nightly Python script, this strategy turns Microsoft price data into cash-secured put and covered-call orders. GitHub Actions runs the script and saves the orders for Sanji to read.</p>
+<div class="desk-meta"><div><small>UNDERLYING</small><strong>MSFT <span>· conid 272093</span></strong></div><div><small>STARTING PAPER BUDGET</small><strong>$50,000</strong></div><div><small>SCHEDULE</small><strong>22:00 <span>New York</span></strong></div><div><small>ACCOUNT</small><strong class="paper-label">Paper trading</strong></div></div>
+<div class="actions"><a class="button" href="#run">Latest orders</a><a class="button light" href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/actions/workflows/nightly-orders.yml">GitHub Actions</a><a class="text-link" href="research-revision.html">Four-stock research</a></div>
+<p class="byline">Chuyu Qin · FINTECH 535 · Final Cycle</p>
+</section>
+<section class="pipeline" aria-label="Nightly workflow"><div><small>INPUT</small><strong>Prices and positions</strong><span>Read the files in my repository</span></div><b aria-hidden="true">→</b><div><small>DECISION</small><strong>Apply the wheel rules</strong><span>Check cash, shares and earlier orders</span></div><b aria-hidden="true">→</b><div><small>OUTPUT</small><strong>open_orders.json</strong><span>Save to GitHub and update this page</span></div></section>
+
+<section id="run">
+<div class="section-head"><p class="eyebrow">LATEST RUN</p><h2>Orders</h2></div>
+<div class="status-panel"><div><span class="badge" id="run-badge">Loading status</span><h3 id="run-reason">Latest decision</h3><p id="run-explanation">The order file and run details are linked below.</p></div><dl><div><dt>Price date</dt><dd id="signal-date">See run details</dd></div><div><dt>Next trading session</dt><dd id="target-date">See run details</dd></div><div><dt>Orders in file</dt><dd id="order-count">See run details</dd></div><div><dt>Last run (UTC)</dt><dd id="run-time">See run details</dd></div><div><dt>Price delay</dt><dd id="price-lag">See run details</dd></div><div><dt>Orders for next session</dt><dd id="active-count">See run details</dd></div></dl></div>
+<p class="note" id="order-state-note">Each order has its own trading date.</p>
+<p><a id="verified-run-link" href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/actions/workflows/nightly-orders.yml">Open this run on GitHub</a></p>
+<pre id="actual-orders" aria-label="Current order file">Loading open_orders.json</pre>
+<div class="links"><a href="final-cycle/open_orders.json">Order JSON</a><a href="final-cycle/status.json">Run details</a><a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/blob/main/open_orders.json">Root file</a><a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/blob/main/state/order_commitments.json">Order history</a></div>
+<p>These are the orders saved by my script. An order records what I want to trade; it does not show that the trade filled.</p>
+</section>
+
+<section id="strategy">
+<div class="section-head"><p class="eyebrow">STRATEGY</p><h2>Why the wheel</h2></div>
+<p>The wheel builds on the earlier assignment, with a clear decision at each stage: sell a put when holding cash, sell a covered call when holding shares, and wait while an option is still open. Microsoft is the stock in the price file supplied by Prof. Vestal.</p>
+<p>This version uses stock prices to choose strikes and minimum premiums. The earlier PG backtest used option-chain data and different strike-selection rules, so its returns do not measure the performance of this MSFT version.</p>
+<div class="cards">
+<article><small>CASH</small><h3>Sell a cash-secured put</h3><p>Start with a strike at or below 95% of the latest available close, rounded down to a $5 increment. Lower the strike if needed so buying 100 shares at that price, plus a $0.65 fee reserve, fits within 90% of cash. Skip the order if that would push the strike below half the stock price.</p></article>
+<article><small>SHARES</small><h3>Sell a covered call</h3><p>With shares held in whole 100-share lots, choose a strike at least 5% above the stock price and no lower than the highest purchase price of the shares. Round up to a $5 increment and sell one call against 100 shares. This cost-basis floor can delay a trade after a price decline.</p></article>
+<article><small>OPEN OPTION</small><h3>Wait</h3><p>Keep one option order or position at a time. Wait if an option is already open, the previous order has not been accounted for, or the inputs are missing. Each order is limited to one contract.</p></article>
+</div>
+<h3>Expiry and limit price</h3>
+<p>The <code>21DTE+</code> rule requests a listed expiry at least 21 calendar days after the order’s trading date. The minimum premium is 0.5% of the stock close, rounded up to the next cent. This is a pricing rule, not a downloaded option quote. The order can remain unfilled if the market does not reach that price, or unresolved if Sanji cannot find the contract.</p>
+</section>
+
+<section id="submission-check">
+<div class="section-head"><p class="eyebrow">NOVEMBER 20 RUN</p><h2>What the latest check showed</h2></div>
+<p>The Friday run used November 20 prices and looked ahead to Monday, November 23. It completed successfully and kept the November 17 order in the file. No new order was added because an updated positions file has not arrived.</p>
+<p>The earlier order keeps its November 17 date, with cash reserved until a positions update shows what happened to it. Once the positions update arrives, the script can decide whether to stay in cash, hold an option or write a covered call.</p>
+<p>The nightly runs from November 17–20 completed successfully, and all 54 local tests passed. The checks cover cash limits, share coverage, trading dates, missing data and repeated runs.</p>
+<div class="links"><a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/actions/runs/44862897726">Friday run</a><a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/actions/runs/44862946132">Website deployment</a><a href="final-cycle/submission-check.json">Check results</a></div>
+<p class="note">This section records the November 20 check. The Orders section above loads the most recent run.</p>
+</section>
+
+<section id="account">
+<div class="section-head"><p class="eyebrow">ACCOUNT RULES</p><h2>Cash and order history</h2></div>
+<p>The starting paper budget is $50,000, set in <code>nightly_config.json</code>. It is the budget for this exercise, not a reported brokerage balance. The first order can use that starting budget while the positions file is still missing.</p>
+<p>Before publication, each order is saved in <code>state/order_commitments.json</code>. Running the script again for the same session reuses the same order ID. For a later session, an updated positions file is required before committing more cash or shares.</p>
+<p>The script uses the latest completed trading day’s price, allowing a delay of one trading session because the price feed can arrive late. The price date and delay appear above. A longer gap stops new orders.</p>
+<details><summary>Positions-file format</summary><p>The script reads the date, cash and holdings from <code>mkt/positions.json</code>, or <code>positions.json</code> at the root. It checks that the date matches the latest completed session. The expected fields are documented in <a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/blob/main/schemas/positions-input.schema.json">the input schema</a>. The reader may need adjustment to match the file Prof. Vestal’s system sends back. An unfamiliar format stops new orders.</p></details>
+</section>
+
+<section id="example">
+<div class="section-head"><p class="eyebrow">EXAMPLES</p><h2>How the rules produce an order</h2></div>
+<p>These examples use test inputs to show each branch of the strategy.</p>
+<div class="tabs" role="group" aria-label="Choose an example"><button type="button" class="active" data-example="put">Cash: sell a put</button><button type="button" data-example="call">Shares: sell a call</button><button type="button" data-example="wait">Open option: wait</button></div>
+<p id="example-description">Loading example</p><pre id="sample-order"></pre>
+<p>The examples are separate from the order file above and are not submitted as trades.</p>
+</section>
+
+<section id="automation">
+<div class="section-head"><p class="eyebrow">AUTOMATION</p><h2>What runs each night</h2></div>
+<p>The GitHub Action is scheduled for 10 p.m. New York time. GitHub can start scheduled jobs late, so the script works out the trading dates when it actually runs. It can also be started manually from the Actions tab.</p>
+<ol><li>Download the latest copy of my repository, including prices and order history.</li><li>Install Python dependencies and run the strategy tests.</li><li>Run <code>src/nightly_orders.py</code> to read the inputs and write the order file.</li><li>Commit changes to GitHub. If another process updated the repository first, stop so the decision can be rerun with those changes.</li><li>Run the Pages workflow to publish the latest files.</li></ol>
+<p>The script saves <code>open_orders.json</code> at the repository root as requested in the assignment, under <code>mkt/</code> to match Prof. Vestal’s order menu, and under <code>docs/</code> for display here.</p>
+<div class="links"><a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/blob/main/.github/workflows/nightly-orders.yml">Nightly workflow</a><a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/blob/main/.github/workflows/deploy-pages.yml">Pages workflow</a><a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/blob/main/src/nightly_orders.py">Python script</a><a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/blob/main/price_history.json">Price input</a><a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535/blob/main/mkt/open_orders.json">mkt order file</a></div>
+</section>
+
+<section id="server">
+<div class="section-head"><p class="eyebrow">SANJI</p><h2>How this connects to the course system</h2></div>
+<p>Prof. Vestal’s server supplies <code>price_history.json</code> to my repository. My job runs after the close and writes the orders. Sanji’s role is to read those orders, work out fills and assignment, and send back updated positions.</p>
+<p>Prof. Vestal said in the November 17 class that he was still building that connection. His order menu also says that order resolution is not enabled yet. For now, my script produces the initial order and waits for a positions update before starting another trade.</p>
+<p>Using the supplied price file avoids a separate LSEG request. The nightly job therefore needs no LSEG login or running desktop session. GitHub’s built-in job token lets it save the output to my repository.</p>
+</section>
+
+<section id="research">
+<div class="section-head"><p class="eyebrow">EARLIER RESEARCH</p><h2>Changes to my wheel study</h2></div>
+<p>The revised AMZN, KO, PG and VZ comparison includes historical Treasury rates in the Sharpe calculation, interest on free cash, and an analysis of why the wheel’s results differed across the four stocks. All four results are shown together because selecting PG after seeing its stronger result introduces selection bias.</p>
+<p><a href="research-revision.html">Read the revised study</a> · <a href="index.html">Original PG report</a></p>
+</section>
+
+<section id="sources">
+<div class="section-head"><p class="eyebrow">REFERENCES</p><h2>Code and course material</h2></div>
+<div class="links"><a href="https://jakevestal.github.io/server-logic-533/order.html">Prof. Vestal: Sanji order menu</a><a href="https://jakevestal.github.io/server-logic-533/setup.html">Prof. Vestal: server setup</a><a href="https://jakevestal.github.io/server-logic-533/oi-clusters.html">Prof. Vestal: OI analysis</a><a href="https://github.com/JakeVestal/server-logic-533/blob/main/.github/workflows/oi-plots.yml">Prof. Vestal: nightly workflow</a><a href="https://github.com/JakeVestal/server-logic-533/blob/main/.github/workflows/pages.yml">Prof. Vestal: Pages workflow</a><a href="https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onschedule">GitHub schedule syntax</a></div>
+<details><summary>Run the script locally</summary><pre>python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements-nightly.txt
+.venv/bin/python -m unittest discover -s tests -p 'test_nightly*.py' -v
+.venv/bin/python src/nightly_orders.py</pre><p>The tests use temporary files. Running the planner itself updates the order file and can reserve cash for an initial order.</p></details>
+</section>
+</main>
+<footer>Chuyu Qin · FINTECH 535 <a href="https://github.com/chuyuqin/Wheel-Strategy-FinTech535">Source repository</a></footer>
+<script src="assets/final-cycle.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+{
+  "config": {
+    "start": "2026-01-02",
+    "end": "2026-10-30",
+    "initial_cash": 50000,
+    "delta_target": 0.3,
+    "delta_min": 0.15,
+    "delta_max": 0.4,
+    "dte_min": 14,
+    "dte_max": 28,
+    "dte_target": 21,
+    "max_relative_spread": 0.25,
+    "max_absolute_spread": 1,
+    "min_volume": 100,
+    "min_open_interest": 500,
+    "option_fee": 0.65,
+    "extra_spread_fraction": 0,
+    "cash_rate": 0,
+    "roll_dte": 0,
+    "early_assignment_stress": true,
+    "max_carried_sessions": 2,
+    "allocation_fraction": 0.9,
+    "put_delta": 0.45,
+    "call_delta": 0.15,
+    "delta_tolerance": 0.1,
+    "call_cost_floor": true
+  },
+  "wheel": {
+    "ending_equity": 51750.19999999998,
+    "net_profit": 1750.1999999999825,
+    "total_return": 0.03500399999999959,
+    "cagr": 0.04248890863001442,
+    "max_drawdown": -0.06330518428857201,
+    "annualized_volatility": 0.12722806182903248,
+    "sharpe_zero_rf": 0.38900847632014945,
+    "annual_returns": {
+      "2026": 0.03500399999999959
+    },
+    "contracts_sold": 11,
+    "mean_capital_usage": 0.4422380717568246,
+    "option_opens": 11,
+    "option_closes": 1,
+    "put_assignments": 2,
+    "call_assignments": 1,
+    "expirations": 7,
+    "fees": 7.800000000000001,
+    "premium_received": 4244.000000000001,
+    "buyback_cost": 25.0,
+    "stock_cashflow": -2461.0,
+    "carried_mark_days": 0,
+    "skip_reasons": {
+      "no_eligible_P": 8,
+      "no_eligible_C": 25
+    },
+    "stock_exposure_fraction": 0.6985645933014354,
+    "mean_reserved_cash": 6004.784688995215,
+    "events": 26
+  },
+  "buy_hold": {
+    "ending_equity": 53059.19745729042,
+    "net_profit": 3059.197457290422,
+    "total_return": 0.06118394914580838,
+    "cagr": 0.07446480842745307,
+    "max_drawdown": -0.19644156894460174,
+    "annualized_volatility": 0.3479396898855826,
+    "sharpe_zero_rf": 0.37548282080773704,
+    "annual_returns": {
+      "2026": 0.06118394914580838
+    }
+  },
+  "excess_return": -0.02617994914580879,
+  "relative_wealth": -0.02467050992137798,
+  "sessions": 209
+}

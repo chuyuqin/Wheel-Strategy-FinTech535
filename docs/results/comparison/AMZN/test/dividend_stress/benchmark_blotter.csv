@@ -1,0 +1,3 @@
+event_id,date,action,instrument,quantity,price,fee,cashflow,cash_after,shares_after,dividend_receivable_after
+1,2024-01-02,BUY_STOCK,AMZN.O,333.4444814938313,149.95,0,-50000.0,0.0,333.4444814938313,0
+2,2024-09-30,SELL_STOCK,AMZN.O,-333.4444814938313,186.3,0,62120.70690230077,62120.70690230077,0.0,0

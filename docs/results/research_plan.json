@@ -1,0 +1,50 @@
+{
+  "recorded_utc": "2026-11-01T22:10:47.733534+00:00",
+  "purpose": "Compare eight economically motivated wheel settings; choose using 2023 only, then freeze before requesting 2026 performance data.",
+  "training": [
+    "2023-01-03",
+    "2023-12-29"
+  ],
+  "validation": [
+    "2024-01-02",
+    "2024-12-31"
+  ],
+  "previously_seen_diagnostic": [
+    "2025-01-02",
+    "2025-12-31"
+  ],
+  "new_test": [
+    "2026-01-02",
+    "2026-10-30"
+  ],
+  "selection": "Highest 2023 net account return; ties resolved by smaller drawdown, then configuration ID. No reselection using later periods.",
+  "allocation_fraction": 0.9,
+  "call_cost_floor": true,
+  "delta_tolerance": 0.1,
+  "put_deltas": [
+    0.3,
+    0.45
+  ],
+  "call_deltas": [
+    0.15,
+    0.3
+  ],
+  "maturity_windows": [
+    {
+      "target": 21,
+      "minimum": 14,
+      "maximum": 28
+    },
+    {
+      "target": 35,
+      "minimum": 28,
+      "maximum": 45
+    }
+  ],
+  "bias_limits": [
+    "AMZN and the 2023\u20132025 path were already examined; historical redesign remains exploratory.",
+    "Single surviving stock, a bounded strike grid, daily quote timing and simulated assignment remain limitations.",
+    "A later historical sample inspected only after rule freeze is a held-out historical test, not a prospective live experiment."
+  ],
+  "data_boundary": "Retain the same monthly $40\u2013$300 strike grid. No new underlying search, leverage, cash-yield assumption, or parameter expansion based on test results."
+}

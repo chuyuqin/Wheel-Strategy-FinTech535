@@ -1,0 +1,102 @@
+{
+  "status": "ok",
+  "config": {
+    "start": "2024-01-02",
+    "end": "2024-09-30",
+    "initial_cash": 50000,
+    "delta_target": 0.3,
+    "delta_min": 0.15,
+    "delta_max": 0.4,
+    "dte_min": 14,
+    "dte_max": 28,
+    "dte_target": 21,
+    "max_relative_spread": 0.25,
+    "max_absolute_spread": 1,
+    "min_volume": 100,
+    "min_open_interest": 500,
+    "option_fee": 0.65,
+    "extra_spread_fraction": 0,
+    "cash_rate": 0,
+    "roll_dte": 0,
+    "early_assignment_stress": false,
+    "max_carried_sessions": 2,
+    "allocation_fraction": 0.9,
+    "put_delta": 0.45,
+    "call_delta": 0.15,
+    "delta_tolerance": 0.1,
+    "call_cost_floor": true
+  },
+  "symbol": "PG.N",
+  "dividend_assignment_stress": true,
+  "wheel": {
+    "ending_equity": 54679.04999999999,
+    "net_profit": 4679.049999999988,
+    "total_return": 0.09358099999999969,
+    "cagr": 0.12714337791566455,
+    "max_drawdown": -0.017336898994872674,
+    "annualized_volatility": 0.04173358071044024,
+    "sharpe_zero_rf": 2.894698833756444,
+    "annual_returns": {
+      "2024": 0.09358099999999969
+    },
+    "dividends_earned": 0.0,
+    "dividends_paid": 0.0,
+    "ending_dividend_receivable": 0.0,
+    "pre_dividend_assignments": 0,
+    "contracts_sold": 21,
+    "mean_capital_usage": 0.5181986291376884,
+    "option_opens": 10,
+    "option_closes": 1,
+    "put_assignments": 2,
+    "call_assignments": 1,
+    "expirations": 6,
+    "fees": 14.950000000000001,
+    "premium_received": 3246.0,
+    "buyback_cost": 186.0,
+    "stock_cashflow": 1634.0,
+    "carried_mark_days": 0,
+    "skip_reasons": {
+      "no_eligible_P": 30,
+      "execution_quote_rejected": 2,
+      "no_eligible_C": 9
+    },
+    "stock_exposure_fraction": 0.26595744680851063,
+    "mean_reserved_cash": 17941.489361702126,
+    "events": 24
+  },
+  "buy_hold": {
+    "ending_equity": 59252.15863216113,
+    "net_profit": 9252.158632161132,
+    "total_return": 0.18504317264322268,
+    "cagr": 0.25501767066733416,
+    "max_drawdown": -0.05397140042042725,
+    "annualized_volatility": 0.14835594152497758,
+    "sharpe_zero_rf": 1.6085818617614644,
+    "annual_returns": {
+      "2024": 0.18504317264322268
+    },
+    "dividends_reinvested": true,
+    "dividends_earned": 998.7492754364109,
+    "dividends_paid": 998.7492754364109,
+    "ending_dividend_receivable": 0.0
+  },
+  "buy_hold_cash": {
+    "ending_equity": 59189.306358381495,
+    "net_profit": 9189.306358381495,
+    "total_return": 0.18378612716763,
+    "cagr": 0.2532368656326931,
+    "max_drawdown": -0.053363798299874365,
+    "annualized_volatility": 0.14700178138618117,
+    "sharpe_zero_rf": 1.6123499752297497,
+    "annual_returns": {
+      "2024": 0.18378612716763
+    },
+    "dividends_reinvested": false,
+    "dividends_earned": 992.6401398037372,
+    "dividends_paid": 992.6401398037372,
+    "ending_dividend_receivable": 0.0
+  },
+  "excess_return": -0.09146217264322298,
+  "relative_wealth": -0.07718045616786917,
+  "sessions": 188
+}

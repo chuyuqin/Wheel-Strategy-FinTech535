@@ -1,0 +1,4 @@
+exchange-calendars==4.11.3
+jsonschema==4.26.0
+pandas==2.2.3
+numpy==2.2.6

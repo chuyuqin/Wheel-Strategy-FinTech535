@@ -1,0 +1,227 @@
+{
+  "status": "passed",
+  "unit_tests": 21,
+  "comparison_raw_responses_verified": 91,
+  "account_runs_replayed": 32,
+  "events_replayed": 724,
+  "daily_portfolios_reconciled": 10016,
+  "all_four_tickers_reported": true,
+  "failed_cases": [],
+  "amzn_parity": {
+    "historical": {
+      "wheel_unchanged": true,
+      "benchmark_unchanged": true,
+      "reference": "original frozen engine rerun on the matched comparison dates"
+    },
+    "test": {
+      "wheel_unchanged": true,
+      "benchmark_unchanged": true,
+      "reference": "original frozen engine rerun on the matched comparison dates"
+    }
+  },
+  "checks": [
+    "ex-date ownership and dividend amount",
+    "payment-date cash availability",
+    "unpaid dividend receivables",
+    "dividend reinvestment at observed ask",
+    "pre-dividend stress uses announced information only",
+    "cash and option/share quantity replay",
+    "put collateral and covered calls",
+    "daily equity and terminal liquidation",
+    "verified raw response hashes"
+  ],
+  "runs": [
+    {
+      "path": "AMZN/historical",
+      "account": "wheel",
+      "sessions": 438,
+      "events": 48
+    },
+    {
+      "path": "AMZN/historical",
+      "account": "benchmark_",
+      "sessions": 438,
+      "events": 2
+    },
+    {
+      "path": "AMZN/historical",
+      "account": "benchmark_cash_",
+      "sessions": 438,
+      "events": 2
+    },
+    {
+      "path": "AMZN/historical/dividend_stress",
+      "account": "wheel",
+      "sessions": 438,
+      "events": 48
+    },
+    {
+      "path": "AMZN/test",
+      "account": "wheel",
+      "sessions": 188,
+      "events": 22
+    },
+    {
+      "path": "AMZN/test",
+      "account": "benchmark_",
+      "sessions": 188,
+      "events": 2
+    },
+    {
+      "path": "AMZN/test",
+      "account": "benchmark_cash_",
+      "sessions": 188,
+      "events": 2
+    },
+    {
+      "path": "AMZN/test/dividend_stress",
+      "account": "wheel",
+      "sessions": 188,
+      "events": 22
+    },
+    {
+      "path": "KO/historical",
+      "account": "wheel",
+      "sessions": 438,
+      "events": 44
+    },
+    {
+      "path": "KO/historical",
+      "account": "benchmark_",
+      "sessions": 438,
+      "events": 21
+    },
+    {
+      "path": "KO/historical",
+      "account": "benchmark_cash_",
+      "sessions": 438,
+      "events": 15
+    },
+    {
+      "path": "KO/historical/dividend_stress",
+      "account": "wheel",
+      "sessions": 438,
+      "events": 44
+    },
+    {
+      "path": "KO/test",
+      "account": "wheel",
+      "sessions": 188,
+      "events": 20
+    },
+    {
+      "path": "KO/test",
+      "account": "benchmark_",
+      "sessions": 188,
+      "events": 9
+    },
+    {
+      "path": "KO/test",
+      "account": "benchmark_cash_",
+      "sessions": 188,
+      "events": 7
+    },
+    {
+      "path": "KO/test/dividend_stress",
+      "account": "wheel",
+      "sessions": 188,
+      "events": 20
+    },
+    {
+      "path": "PG/historical",
+      "account": "wheel",
+      "sessions": 438,
+      "events": 58
+    },
+    {
+      "path": "PG/historical",
+      "account": "benchmark_",
+      "sessions": 438,
+      "events": 23
+    },
+    {
+      "path": "PG/historical",
+      "account": "benchmark_cash_",
+      "sessions": 438,
+      "events": 16
+    },
+    {
+      "path": "PG/historical/dividend_stress",
+      "account": "wheel",
+      "sessions": 438,
+      "events": 58
+    },
+    {
+      "path": "PG/test",
+      "account": "wheel",
+      "sessions": 188,
+      "events": 24
+    },
+    {
+      "path": "PG/test",
+      "account": "benchmark_",
+      "sessions": 188,
+      "events": 11
+    },
+    {
+      "path": "PG/test",
+      "account": "benchmark_cash_",
+      "sessions": 188,
+      "events": 8
+    },
+    {
+      "path": "PG/test/dividend_stress",
+      "account": "wheel",
+      "sessions": 188,
+      "events": 24
+    },
+    {
+      "path": "VZ/historical",
+      "account": "wheel",
+      "sessions": 438,
+      "events": 38
+    },
+    {
+      "path": "VZ/historical",
+      "account": "benchmark_",
+      "sessions": 438,
+      "events": 23
+    },
+    {
+      "path": "VZ/historical",
+      "account": "benchmark_cash_",
+      "sessions": 438,
+      "events": 16
+    },
+    {
+      "path": "VZ/historical/dividend_stress",
+      "account": "wheel",
+      "sessions": 438,
+      "events": 42
+    },
+    {
+      "path": "VZ/test",
+      "account": "wheel",
+      "sessions": 188,
+      "events": 18
+    },
+    {
+      "path": "VZ/test",
+      "account": "benchmark_",
+      "sessions": 188,
+      "events": 11
+    },
+    {
+      "path": "VZ/test",
+      "account": "benchmark_cash_",
+      "sessions": 188,
+      "events": 8
+    },
+    {
+      "path": "VZ/test/dividend_stress",
+      "account": "wheel",
+      "sessions": 188,
+      "events": 18
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+name: Nightly wheel orders
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22 * * *'
+      timezone: America/New_York
+
+concurrency:
+  group: nightly-wheel-orders
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out latest main including server prices and commitments
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-nightly.txt
+      - name: Install order planner dependencies
+        run: python -m pip install -r requirements-nightly.txt
+      - name: Verify strategy and order invariants
+        run: python -m unittest discover -s tests -p 'test_nightly*.py' -v
+      - name: Generate and validate open orders
+        id: planner
+        continue-on-error: true
+        run: python src/nightly_orders.py
+      - name: Publish safe output and execution summary
+        if: always() && steps.planner.outcome != 'skipped'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add open_orders.json mkt/open_orders.json docs/final-cycle/open_orders.json docs/final-cycle/status.json
+          if [ -f state/order_commitments.json ]; then git add state/order_commitments.json; fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update nightly wheel orders and run status'
+            # A concurrent server update must not be merged with stale decisions.
+            # On a rejected push, fail and rerun against the newest main instead.
+            git push origin HEAD:main
+          fi
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          s=json.loads(Path('docs/final-cycle/status.json').read_text())
+          print('## Nightly wheel order planner')
+          for k in ('status','reason','signal_session','target_session','orders_count','book_source'):
+              print(f'- **{k}**: {s.get(k,"not available")}')
+          print('\nNo broker connection. Empty orders mean no new commitment.')
+          PY
+      - name: Fail visibly on invalid inputs or an internal error
+        if: steps.planner.outcome == 'failure'
+        run: exit 1

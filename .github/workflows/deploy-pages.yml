@@ -1,0 +1,41 @@
+name: Deploy coursework pages
+
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**', '.github/workflows/deploy-pages.yml']
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Nightly wheel orders']
+    types: [completed]
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    # Also publish a failed planner's diagnostic and fail-closed empty file.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The planner creates a NEW commit: its original head_sha is stale.
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Deploy documentation and latest order status
+        id: deployment
+        uses: actions/deploy-pages@v4

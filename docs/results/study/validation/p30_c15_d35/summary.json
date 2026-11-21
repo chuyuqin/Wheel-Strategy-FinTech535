@@ -1,0 +1,73 @@
+{
+  "config": {
+    "start": "2024-01-02",
+    "end": "2024-12-31",
+    "initial_cash": 50000,
+    "delta_target": 0.3,
+    "delta_min": 0.15,
+    "delta_max": 0.4,
+    "dte_min": 28,
+    "dte_max": 45,
+    "dte_target": 35,
+    "max_relative_spread": 0.25,
+    "max_absolute_spread": 1,
+    "min_volume": 100,
+    "min_open_interest": 500,
+    "option_fee": 0.65,
+    "extra_spread_fraction": 0,
+    "cash_rate": 0,
+    "roll_dte": 0,
+    "early_assignment_stress": false,
+    "max_carried_sessions": 2,
+    "allocation_fraction": 0.9,
+    "put_delta": 0.3,
+    "call_delta": 0.15,
+    "delta_tolerance": 0.1,
+    "call_cost_floor": true
+  },
+  "wheel": {
+    "ending_equity": 62184.45,
+    "net_profit": 12184.449999999997,
+    "total_return": 0.24368900000000004,
+    "cagr": 0.2438747852029144,
+    "max_drawdown": -0.09063856907706203,
+    "annualized_volatility": 0.13349018157470346,
+    "sharpe_zero_rf": 1.7011212033601528,
+    "annual_returns": {
+      "2024": 0.24368900000000004
+    },
+    "contracts_sold": 25,
+    "mean_capital_usage": 0.6734156580969627,
+    "option_opens": 12,
+    "option_closes": 1,
+    "put_assignments": 1,
+    "call_assignments": 0,
+    "expirations": 10,
+    "fees": 17.55,
+    "premium_received": 5368.000000000001,
+    "buyback_cost": 34.0,
+    "stock_cashflow": 6868.0,
+    "carried_mark_days": 0,
+    "skip_reasons": {
+      "no_eligible_P": 1
+    },
+    "stock_exposure_fraction": 0.4523809523809524,
+    "mean_reserved_cash": 18900.79365079365,
+    "events": 26
+  },
+  "buy_hold": {
+    "ending_equity": 73137.71257085695,
+    "net_profit": 23137.71257085695,
+    "total_return": 0.462754251417139,
+    "cagr": 0.463135339648471,
+    "max_drawdown": -0.1948902554872256,
+    "annualized_volatility": 0.2802869760102094,
+    "sharpe_zero_rf": 1.497657669009409,
+    "annual_returns": {
+      "2024": 0.462754251417139
+    }
+  },
+  "excess_return": -0.21906525141713895,
+  "relative_wealth": -0.1497621703747607,
+  "sessions": 252
+}

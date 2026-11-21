@@ -1,0 +1,78 @@
+{
+  "config": {
+    "start": "2023-01-03",
+    "end": "2025-12-31",
+    "initial_cash": 50000,
+    "delta_target": 0.3,
+    "delta_min": 0.15,
+    "delta_max": 0.4,
+    "dte_min": 14,
+    "dte_max": 28,
+    "dte_target": 21,
+    "max_relative_spread": 0.25,
+    "max_absolute_spread": 1,
+    "min_volume": 100,
+    "min_open_interest": 500,
+    "option_fee": 0.65,
+    "extra_spread_fraction": 0,
+    "cash_rate": 0,
+    "roll_dte": 0,
+    "early_assignment_stress": false,
+    "max_carried_sessions": 2,
+    "allocation_fraction": 0.9,
+    "put_delta": 0.45,
+    "call_delta": 0.15,
+    "delta_tolerance": 0.1,
+    "call_cost_floor": true
+  },
+  "wheel": {
+    "ending_equity": 97242.15,
+    "net_profit": 47242.149999999994,
+    "total_return": 0.9448429999999999,
+    "cagr": 0.24867347389661743,
+    "max_drawdown": -0.1904647219760317,
+    "annualized_volatility": 0.16935138339014308,
+    "sharpe_zero_rf": 1.401163198377435,
+    "annual_returns": {
+      "2023": 0.44075700000000007,
+      "2024": 0.25699961895031564,
+      "2025": 0.07388719464216775
+    },
+    "contracts_sold": 126,
+    "mean_capital_usage": 0.6912915677845094,
+    "option_opens": 36,
+    "option_closes": 1,
+    "put_assignments": 4,
+    "call_assignments": 3,
+    "expirations": 28,
+    "fees": 83.85,
+    "premium_received": 30787.0,
+    "buyback_cost": 206.99999999999997,
+    "stock_cashflow": 16746.0,
+    "carried_mark_days": 0,
+    "skip_reasons": {
+      "no_eligible_P": 41,
+      "no_eligible_C": 52
+    },
+    "stock_exposure_fraction": 0.5132978723404256,
+    "mean_reserved_cash": 21740.02659574468,
+    "events": 80
+  },
+  "buy_hold": {
+    "ending_equity": 134432.14909726268,
+    "net_profit": 84432.14909726268,
+    "total_return": 1.6886429819452538,
+    "cagr": 0.3912550199922502,
+    "max_drawdown": -0.3090142939767,
+    "annualized_volatility": 0.31818585856363885,
+    "sharpe_zero_rf": 1.2006847733184143,
+    "annual_returns": {
+      "2023": 0.7698311007571346,
+      "2024": 0.4435961563775175,
+      "2025": 0.05233883468587597
+    }
+  },
+  "excess_return": -0.7437999819452539,
+  "relative_wealth": -0.2766451280218353,
+  "sessions": 752
+}

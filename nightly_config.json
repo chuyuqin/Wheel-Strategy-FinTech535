@@ -1,0 +1,15 @@
+{
+  "strategy_version": "wheel-final-v1",
+  "underlying": 272093,
+  "paper_initial_cash": 50000,
+  "max_price_lag_sessions": 1,
+  "allocation_fraction": 0.9,
+  "max_contracts": 1,
+  "put_moneyness": 0.95,
+  "call_moneyness": 1.05,
+  "strike_increment": 5,
+  "minimum_put_moneyness": 0.5,
+  "expiry": "21DTE+",
+  "minimum_premium_fraction": 0.005,
+  "option_fee_reserve": 0.65
+}

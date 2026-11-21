@@ -1,0 +1,74 @@
+{
+  "config": {
+    "start": "2025-01-02",
+    "end": "2025-12-31",
+    "initial_cash": 50000,
+    "delta_target": 0.3,
+    "delta_min": 0.15,
+    "delta_max": 0.4,
+    "dte_min": 28,
+    "dte_max": 45,
+    "dte_target": 35,
+    "max_relative_spread": 0.25,
+    "max_absolute_spread": 1,
+    "min_volume": 100,
+    "min_open_interest": 500,
+    "option_fee": 0.65,
+    "extra_spread_fraction": 0,
+    "cash_rate": 0,
+    "roll_dte": 0,
+    "early_assignment_stress": false,
+    "max_carried_sessions": 2,
+    "allocation_fraction": 0.9,
+    "put_delta": 0.45,
+    "call_delta": 0.3,
+    "delta_tolerance": 0.1,
+    "call_cost_floor": true
+  },
+  "wheel": {
+    "ending_equity": 59167.69999999999,
+    "net_profit": 9167.69999999999,
+    "total_return": 0.1833539999999998,
+    "cagr": 0.18403833562613814,
+    "max_drawdown": -0.19483075587894005,
+    "annualized_volatility": 0.22393857151520052,
+    "sharpe_zero_rf": 0.8688013601788038,
+    "annual_returns": {
+      "2025": 0.1833539999999998
+    },
+    "contracts_sold": 20,
+    "mean_capital_usage": 0.8054976404690317,
+    "option_opens": 10,
+    "option_closes": 1,
+    "put_assignments": 2,
+    "call_assignments": 1,
+    "expirations": 6,
+    "fees": 14.3,
+    "premium_received": 9638.000000000002,
+    "buyback_cost": 620.0,
+    "stock_cashflow": 164.0,
+    "carried_mark_days": 0,
+    "skip_reasons": {
+      "no_eligible_P": 4,
+      "no_eligible_C": 35
+    },
+    "stock_exposure_fraction": 0.608,
+    "mean_reserved_cash": 16252.0,
+    "events": 24
+  },
+  "buy_hold": {
+    "ending_equity": 52404.30459065522,
+    "net_profit": 2404.3045906552215,
+    "total_return": 0.048086091813104526,
+    "cagr": 0.04825514435223721,
+    "max_drawdown": -0.3090142939767,
+    "annualized_volatility": 0.34266101503996194,
+    "sharpe_zero_rf": 0.30782206162876424,
+    "annual_returns": {
+      "2025": 0.048086091813104526
+    }
+  },
+  "excess_return": 0.13526790818689527,
+  "relative_wealth": 0.12906182921757203,
+  "sessions": 250
+}
