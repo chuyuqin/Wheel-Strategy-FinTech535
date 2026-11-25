@@ -34,8 +34,45 @@ jobs:
           ref: main
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v5.0.0
+        id: upload
         with:
           path: docs
       - name: Deploy documentation and latest order status
         id: deployment
-        uses: actions/deploy-pages@v5.0.1
+        uses: actions/github-script@v8
+        with:
+          script: |
+            // Use the exact upload ID instead of listing artifacts immediately.
+            const artifactId = Number('${{ steps.upload.outputs.artifact_id }}');
+            if (!Number.isSafeInteger(artifactId) || artifactId <= 0) {
+              throw new Error('Upload did not return a valid artifact ID');
+            }
+            const { owner, repo } = context.repo;
+            const oidcToken = await core.getIDToken();
+            const { data: deployment } = await github.request(
+              'POST /repos/{owner}/{repo}/pages/deployments', {
+                owner, repo, artifact_id: artifactId,
+                pages_build_version: context.sha, oidc_token: oidcToken
+              }
+            );
+            core.info(`Created Pages deployment ${deployment.id}`);
+            if (deployment.page_url) core.setOutput('page_url', deployment.page_url);
+            for (let attempt = 0; attempt < 90; attempt++) {
+              const { data: result } = await github.request(
+                'GET /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}', {
+                  owner, repo, pages_deployment_id: deployment.id
+                }
+              );
+              core.info(`Pages status: ${result.status}`);
+              if (result.status === 'succeed') {
+                if (result.page_url) core.setOutput('page_url', result.page_url);
+                return;
+              }
+              if (['deployment_failed', 'deployment_content_failed',
+                   'deployment_cancelled', 'deployment_lost',
+                   'deployment_system_error'].includes(result.status)) {
+                throw new Error(`Pages deployment failed: ${result.status}`);
+              }
+              await new Promise(resolve => setTimeout(resolve, 5000));
+            }
+            throw new Error('Timed out waiting for Pages deployment');
