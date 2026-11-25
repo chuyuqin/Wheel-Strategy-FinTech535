@@ -33,9 +33,9 @@ jobs:
           # The planner creates a NEW commit: its original head_sha is stale.
           ref: main
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: docs
       - name: Deploy documentation and latest order status
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5.0.1
