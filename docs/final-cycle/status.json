@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T11:45:14.537379+00:00",
+  "generated_at": "2026-11-27T11:39:16.874692+00:00",
   "status": "waiting",
   "orders_count": 1,
   "strategy": "wheel-final-v1",
@@ -7,7 +7,7 @@
   "broker_connected": false,
   "execution_context": "github_actions",
   "price_sha256": "54524761b08d965a211c0e0bf89427afaa465e21695fa3ee7389e5beca7e5469",
-  "workflow_run_url": "https://github.com/chuyuqin/Wheel-Strategy-FinTech535/actions/runs/45813333107",
+  "workflow_run_url": "https://github.com/chuyuqin/Wheel-Strategy-FinTech535/actions/runs/45992178043",
   "completed_session": "2026-11-25",
   "target_session": "2026-11-27",
   "underlying": 272093,
